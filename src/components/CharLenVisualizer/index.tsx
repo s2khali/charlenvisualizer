@@ -18,10 +18,9 @@ export const CharLenVisualizer: React.FC = () => {
     const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         if (typeof parseInt(value) === 'number' && parseInt(value) >= 0) {
-            console.log(parseInt(value));
             setCharlen(parseInt(value));
         } else {
-            setCharlen(1);
+            setCharlen(0);
         }
     };
 

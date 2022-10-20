@@ -12,7 +12,7 @@ export const VisualizerControls: React.FC<props> = (props: props) => {
     return (
         <ControlsContainer>
             <VisualizerArrow onClick={props.decrement} />
-            <VisualizerNumber type="number" value={props.number} onChange={props.handleOnChange} min={1} />
+            <VisualizerNumber type="number" value={props.number} onChange={props.handleOnChange} />
             <VisualizerArrow more onClick={props.increment} />
         </ControlsContainer>
     );
@@ -53,7 +53,7 @@ const VisualizerNumber = styled.input`
     font-size: 3.5rem;
     font-family: ${(props) => props.theme.fonts.mainFont};
     display: block;
-    width: 100%;
+    width: 8rem;
     max-width: 250px;
     margin: 0 12px;
     height: 5rem;
@@ -70,5 +70,5 @@ const ControlsContainer = styled.div`
     display: flex;
     justify-content: space-around;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 12vh auto 0;
 `;
