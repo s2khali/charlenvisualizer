@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {VisualizerControls} from './VisualizerControls';
 import {useState} from 'react';
+import {Visualizer} from './Visualizer';
 
 export const CharLenVisualizer: React.FC = () => {
     const [charlen, setCharlen] = useState(50);
@@ -32,7 +33,7 @@ export const CharLenVisualizer: React.FC = () => {
                 decrement={decrement}
                 handleOnChange={handleOnChange}
             />
-            {/*<visualizer />*/}
+            <Visualizer />
         </>
     );
 };

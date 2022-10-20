@@ -16,6 +16,7 @@ declare module 'styled-components' {
             mainDarkBorderHover: string;
             mainAccent: string;
             mainAccent2: string;
+            mainAccent3: string;
             mainFont: string;
             mainFontLight: string;
             mainFontHover: string;
