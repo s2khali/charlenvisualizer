@@ -11,6 +11,7 @@ import {ThemeProvider} from 'styled-components';
 import {theme} from './Theme';
 import {Logo} from './components/Logo';
 import GlobalHelmet from './GlobalHelmet';
+import {CharLenVisualizer} from './components/CharLenVisualizer';
 
 const App: FunctionComponent = () => {
     return (
@@ -19,6 +20,7 @@ const App: FunctionComponent = () => {
                 <GlobalStyle />
                 <GlobalHelmet />
                 <Logo />
+                <CharLenVisualizer />
             </ThemeProvider>
         </React.StrictMode>
     );
