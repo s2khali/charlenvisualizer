@@ -6,13 +6,19 @@ interface props {
     increment: () => void;
     decrement: () => void;
     handleOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    handleNewValue: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const VisualizerControls: React.FC<props> = (props: props) => {
     return (
         <ControlsContainer>
             <VisualizerArrow onClick={props.decrement} />
-            <VisualizerNumber type="number" value={props.number} onChange={props.handleOnChange} />
+            <VisualizerNumber
+                type="number"
+                value={props.number}
+                onChange={props.handleOnChange}
+                onBlur={props.handleNewValue}
+            />
             <VisualizerArrow more onClick={props.increment} />
         </ControlsContainer>
     );
