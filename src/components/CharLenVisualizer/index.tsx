@@ -49,7 +49,7 @@ export const CharLenVisualizer: React.FC = () => {
         const value = e.target.value;
         if (typeof parseInt(value) === 'number' && parseInt(value) >= 0 && parseInt(value) <= maxCharLen) {
             setCharlen(parseInt(value));
-            setText(generateRandomString(value));
+            setText(generateRandomString(parseInt(value)));
         } else if (parseInt(value) > maxCharLen) {
             setCharlen(maxCharLen);
             setText(generateRandomString(maxCharLen));
