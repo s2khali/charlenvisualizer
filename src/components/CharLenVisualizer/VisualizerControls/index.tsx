@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled, {css} from 'styled-components';
 
 interface props {
-    number: number;
+    number: number | null;
     increment: () => void;
     decrement: () => void;
     handleOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -15,7 +15,7 @@ export const VisualizerControls: React.FC<props> = (props: props) => {
             <VisualizerArrow onClick={props.decrement} />
             <VisualizerNumber
                 type="number"
-                value={props.number}
+                value={typeof props.number === 'number' ? props.number : ''}
                 onChange={props.handleOnChange}
                 onBlur={props.handleNewValue}
             />
@@ -59,22 +59,27 @@ const VisualizerNumber = styled.input`
     font-size: 3.5rem;
     font-family: ${(props) => props.theme.fonts.mainFont};
     display: block;
-    width: 8rem;
-    max-width: 250px;
+    max-width: 24rem;
     margin: 0 12px;
     height: 5rem;
     padding: 0;
     outline: 0;
     border: none;
+    border-bottom: 1px solid;
+    border-radius: 0;
     font-weight: lighter;
     color: ${(props) => props.theme.colors.mainFontLight};
     text-align: center;
     background: transparent;
+
+    @media (max-width: 768px) {
+        max-width: 40vw;
+    }
 `;
 
 const ControlsContainer = styled.div`
     display: flex;
     justify-content: space-around;
     max-width: 600px;
-    margin: 12vh auto 0;
+    margin: 6vh auto 0;
 `;

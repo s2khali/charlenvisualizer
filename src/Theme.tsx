@@ -15,7 +15,7 @@ const theme: DefaultTheme = {
         mainDarkBorderHover: '#6e6666',
         mainAccent: '#19cbba',
         mainAccent2: '#18daba',
-        mainAccent3: '#95ded7',
+        mainAccent3: '#25bbad',
         mainFont: '#4a4a4a',
         mainFontLight: '#12b5a5',
         mainFontHover: '#ffffff',
