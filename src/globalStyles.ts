@@ -1,11 +1,5 @@
 import {createGlobalStyle} from 'styled-components';
 
-/**
- * Globally used styles for the application.
- * !!! Should be handled by the divisional repos, don't export this style with the module.
- *
- * @author Ben Schnell <schnell@fitmentindustries.com>
- */
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Josefin+Sans:wght@400;500;600;700&family=Quicksand:wght@400;700&display=swap');
 

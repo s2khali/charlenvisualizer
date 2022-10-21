@@ -1,9 +1,3 @@
-/**
- * Our development page.
- *
- * @author Ben Schnell <schnell@fitmentindustries.com>
- */
-
 import React, {FunctionComponent} from 'react';
 import ReactDOM from 'react-dom';
 import GlobalStyle from './globalStyles';
