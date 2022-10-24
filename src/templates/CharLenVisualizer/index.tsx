@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {VisualizerControls} from './VisualizerControls';
+import {VisualizerControls} from '../../components/VisualizerControls';
 import {useState} from 'react';
-import {Visualizer} from './Visualizer';
+import {Visualizer} from '../../components/Visualizer';
 import {VisualizerNote} from './styles';
 
 export const CharLenVisualizer: React.FC = () => {

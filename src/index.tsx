@@ -5,8 +5,9 @@ import {ThemeProvider} from 'styled-components';
 import {theme} from './Theme';
 import {Logo} from './components/Logo';
 import GlobalHelmet from './GlobalHelmet';
-import {CharLenVisualizer} from './components/CharLenVisualizer';
+import {CharLenVisualizer} from './templates/CharLenVisualizer';
 import ReactGA from 'react-ga';
+import {Divider} from './components/Divider';
 
 if (process.env.NODE_ENV === 'production') {
     ReactGA.initialize('G-GPKGNBNFBL');
@@ -21,6 +22,7 @@ const App: FunctionComponent = () => {
                 <GlobalHelmet />
                 <Logo />
                 <CharLenVisualizer />
+                <Divider />
             </ThemeProvider>
         </React.StrictMode>
     );
